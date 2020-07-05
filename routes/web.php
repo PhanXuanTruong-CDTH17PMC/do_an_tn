@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout');
+});
+
+Route::get('/log-in','QuanTriVienController@login');
+Route::get('/admin-info','QuanTriVienController@trangcanhan');
+Route::get('/danh-sach-nhan-vien','QuanTriVienController@danh_sach_nhan_vien');
+Route::get('/them-moi-nhan-vien','NhanVienController@them_nv');
+
+Route::get('/bo-phan', function () {
+    return view('nhan-vien.bo-phan.danh-sach-bo-phan');
+});
+
+Route::get('/them-bo-phan', function () {
+    return view('nhan-vien.bo-phan.them-bo-phan');
 });
