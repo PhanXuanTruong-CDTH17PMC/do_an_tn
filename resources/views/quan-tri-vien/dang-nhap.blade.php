@@ -13,8 +13,8 @@
                             <div class="card-body p-4">
                                 <h5 class="auth-title">Đăng nhập</h5>
                                 
-                                    <form>
-                                    <div>s
+                                    <form action="/admin-info">
+                                    <div>
                                         <label >Tên đăng nhập</label>
                                         <input class="form-control" type="text" id="ten_dang_nhap" name="ten_dang_nhap"  placeholder="Nhập tên đăng nhập">
                                     </div>
@@ -25,7 +25,7 @@
                                     </div>
 
                                     <div class="form-group mb-0 text-center">
-                                        <button class="btn btn-danger btn-block" type="submit">Đăng nhập</button>
+                                        <button class="btn btn-danger btn-block" >Đăng nhập</button>
                                     </div>
 
                                 </form>

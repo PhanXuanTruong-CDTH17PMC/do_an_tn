@@ -1,13 +1,13 @@
 @extends('layout')
 @section('title')
-    Thêm mới bộ phận
+    Thêm mới khu vực
 @endsection
 @section('main-content')
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
                 
-                    <h4 class="page-title">Thêm mới bộ phận</h4>
+                    <h4 class="page-title">Thêm mới khu vực</h4>
                 
             </div>
         </div>
@@ -19,8 +19,8 @@
                     
                     <div class="form-group">
                         
-                        <label>Tên bộ phận<span class="text-danger">*</span></label>
-                        <input type="text"  placeholder="Nhập tên bộ phận" class="form-control">
+                        <label>Tên khu vực<span class="text-danger">*</span></label>
+                        <input type="text"  placeholder="Nhập tên khu vực" class="form-control">
                         
                     </div>
                     <div class="form-group text-left mb-0">

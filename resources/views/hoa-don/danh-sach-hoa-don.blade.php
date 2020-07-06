@@ -1,6 +1,6 @@
 @extends('layout')
 @section('title')
-    Danh sách bộ phận
+    Danh sách hóa đơn
 @endsection
 @section('css')
 
@@ -43,9 +43,9 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box">
-            <h4 class="page-title">Nhân viên</h4>
-            <a href="/them-bo-phan" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
-            
+            <h4 class="page-title">Hóa đơn</h4>
+            <a href="/them-moi-hoa-don" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
+         
             <!-- @if (isset($quanTriViens))
                 <a href="{{ route('quan-tri-vien.thung-rac') }}" style="margin-bottom:10px;" class="btn btn-info waves-effect waves-light">Xem quản trị viên đã xóa</a>
             @endif -->
@@ -57,16 +57,19 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <table class="table dt-responsive nowrap">
+                <table  class="table dt-responsive nowrap">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Bộ phận</th>
+                            <th>Mã căn hộ</th>
+                            <th>Tên dịch vụ</th>
+                            <th>Số lượng</th>
+							<th>Thành tiền</th>
+							<th>Tình trạng</th>
                             
-
+                            
                         </tr>
                     </thead>
-                    <!--  -->
+                    
                 </table>
             </div> <!-- end card body-->
         </div> <!-- end card -->
