@@ -80,27 +80,27 @@
                             </a>
                         </li>
                         <li class="has-submenu">
-                            <a href="/can-ho">
+                            <a >
                                 Căn hộ
                             </a>
                         </li>
                         <li class="has-submenu">
-                            <a href="/cu-dan">
+                            <a >
                                 Cư dân
                             </a>
                         </li>
                         <li class="has-submenu">
-                            <a href="/phuong-tien">
+                            <a >
                                 Phương tiện
                             </a>
                         </li>
                         <li class="has-submenu">
-                            <a href="/dich-vu">
+                            <a >
                                 Dịch vụ
                             </a>
                         </li>
                         <li class="has-submenu">
-                            <a href="/hoa-don">
+                            <a >
                                 Hóa đơn
                             </a>
                         </li>
