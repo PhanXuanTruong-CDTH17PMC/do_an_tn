@@ -1,10 +1,10 @@
-    <?php
+<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-    
-class CreateLoaiAccountsTable extends Migration
+
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateLoaiAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('LoaiAccount', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('ten_loai_acciunt');
-            $table->softDeletes();
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateLoaiAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('loai_accounts');
+        Schema::dropIfExists('users');
     }
 }
