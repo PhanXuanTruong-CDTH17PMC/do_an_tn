@@ -15,7 +15,7 @@ class CreateCuDansTable extends Migration
     {
         Schema::create('CuDan', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ho_ten_cd');
+            $table->Text('ho_ten_cd');
             $table->Text('CMND');
             $table->Text('email');
             $table->Text('SDT');

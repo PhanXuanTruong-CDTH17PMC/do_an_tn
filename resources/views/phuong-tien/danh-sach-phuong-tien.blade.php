@@ -1,6 +1,6 @@
 @extends('layout')
 @section('title')
-    Danh sách Nhân viên
+    Danh sách phương tiện
 @endsection
 @section('css')
 
@@ -43,9 +43,9 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box">
-            <h4 class="page-title">Nhân viên</h4>
-            <a href="/them-moi-nhan-vien" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
-            <a href="/bo-phan   " style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Quản lý bộ phận</a><br>
+            <h4 class="page-title">Phương tiện</h4>
+            <a href="/them-moi-phuong-tien" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
+            <a href="/khu-vuc   " style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Quản lý khu vực</a><br>
             <!-- @if (isset($quanTriViens))
                 <a href="{{ route('quan-tri-vien.thung-rac') }}" style="margin-bottom:10px;" class="btn btn-info waves-effect waves-light">Xem quản trị viên đã xóa</a>
             @endif -->
@@ -61,14 +61,12 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Họ tên</th>
-                            <th>CMND</th>
-                            <th>SĐT</th>
-                            <th>Email</th>
-                            <th>Ngày sinh</th>
-                            <th>Địa chỉ</th>
-                            <th>Loại tài khoản</th>
-                            <th>Bộ phận</th>
+                            <th>Nhãn hiệu</th>
+                            <th>Màu sắc</th>
+                            <th>Biển số</th>
+                            <th>Khu vực</th>
+                            <th>Loại phương tiện</th>
+                            <th>Mã căn hộ</th>
                             
                         </tr>
                     </thead>

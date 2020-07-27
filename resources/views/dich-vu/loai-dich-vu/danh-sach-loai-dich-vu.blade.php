@@ -1,6 +1,6 @@
 @extends('layout')
 @section('title')
-    Danh sách Nhân viên
+    Danh sách loại dịch vụ
 @endsection
 @section('css')
 
@@ -43,9 +43,9 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box">
-            <h4 class="page-title">Nhân viên</h4>
-            <a href="/them-moi-nhan-vien" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
-            <a href="/bo-phan   " style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Quản lý bộ phận</a><br>
+            <h4 class="page-title">Loại dịch vụ</h4>
+            <a href="/them-moi-loai-dich-vu" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
+            
             <!-- @if (isset($quanTriViens))
                 <a href="{{ route('quan-tri-vien.thung-rac') }}" style="margin-bottom:10px;" class="btn btn-info waves-effect waves-light">Xem quản trị viên đã xóa</a>
             @endif -->
@@ -57,22 +57,16 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <table  class="table dt-responsive nowrap">
+                <table class="table dt-responsive nowrap">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Họ tên</th>
-                            <th>CMND</th>
-                            <th>SĐT</th>
-                            <th>Email</th>
-                            <th>Ngày sinh</th>
-                            <th>Địa chỉ</th>
-                            <th>Loại tài khoản</th>
-                            <th>Bộ phận</th>
-                            
+                            <th>Loại dịch vụ</th>
+                            <th>Chi phí</th>
+
                         </tr>
                     </thead>
-                    
+                    <!--  -->
                 </table>
             </div> <!-- end card body-->
         </div> <!-- end card -->

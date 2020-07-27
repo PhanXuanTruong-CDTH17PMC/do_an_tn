@@ -12,6 +12,7 @@ class KhuVucSeeder extends Seeder
     public function run()
     {
         DB::table('KhuVuc')->insert([
+        [
         	'ten_khu_vuc' => 'Sân trước'
         	
         ],
@@ -26,7 +27,8 @@ class KhuVucSeeder extends Seeder
         [
         	'ten_khu_vuc' => 'Hầm B2'
         	
-        ]);
+        ]
+     ]);
 
 
     }

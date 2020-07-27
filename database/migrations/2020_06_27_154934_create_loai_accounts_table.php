@@ -15,7 +15,7 @@ class CreateLoaiAccountsTable extends Migration
     {
         Schema::create('LoaiAccount', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ten_loai_acciunt');
+            $table->string('ten_loai_account');
             $table->softDeletes();
             $table->timestamps();
         });

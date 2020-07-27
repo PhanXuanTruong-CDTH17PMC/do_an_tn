@@ -1,15 +1,13 @@
 @extends('layout')
 @section('title')
-    Thêm mới nhân viên
+    Thêm mới cư dân
 @endsection
 @section('main-content')
     <div class="row">
         <div class="col-12">
             <div class="page-title-box">
                 
-                    <h4 class="page-title">Thêm mới nhân viên</h4>
-                
-            </div>
+                    <h4 class="page-title">Thêm mới cư dân</h4>
         </div>
     </div>
     <div class="row">
@@ -29,8 +27,6 @@
                         <input type="text"  placeholder="Nhập email" class="form-control">
                         <label>Ngày sinh<span class="text-danger">*</span></label>
                         <input type="date"  placeholder="Ngày sinh" class="form-control">
-                        <label>Username<span class="text-danger">*</span></label>
-                        <input type="text"  placeholder="Nhập tên tài khoản" class="form-control">
                         <label>Mật khẩu<span class="text-danger">*</span></label>
                         <input type="text"  placeholder="Nhập mật khẩu" class="form-control">
                         <label>Loại tài khoản<span class="text-danger">*</span></label>
@@ -40,7 +36,7 @@
                     </div>
                     <div class="form-group text-left mb-0">
                         <button type="submit" class="btn btn-success waves-effect waves-light">Lưu</button>
-                        <a href="/danh-sach-nhan-vien" class="btn btn-purple waves-effect waves-light">Hủy</a>
+                        <a href="#" class="btn btn-purple waves-effect waves-light">Hủy</a>
                     </div>
                 </form>
             </div>

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class NhanVienController extends Controller
 {
-    public function them_nv(){
+    public function create(){
         $title ="Thêm nhân viên";
         return view('nhan-vien.them-moi-nv')->with('title',$title);
     }
@@ -14,7 +14,7 @@ class NhanVienController extends Controller
         $title ="Trang cá nhân";
         return view('quan-tri-vien.trang-ca-nhan')->with('title',$title);
     }
-    public function danh_sach_nhan_vien(){
+    public function index(){
         $title ="Log-in";
         return view('nhan-vien.danh-sach-nhan-vien')->with('title',$title);
     }

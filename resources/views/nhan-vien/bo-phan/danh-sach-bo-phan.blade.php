@@ -1,6 +1,6 @@
 @extends('layout')
 @section('title')
-    Danh sách Nhân viên
+    Danh sách bộ phận
 @endsection
 @section('css')
 

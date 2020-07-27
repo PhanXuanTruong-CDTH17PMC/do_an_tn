@@ -11,6 +11,13 @@ class LoaiAccountSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('LoaiAccount')->insert([
+        [
+            'ten_loai_acciunt'=> 'Admin',
+        ],
+    	[
+            'ten_loai_acciunt'=> 'Nhân viên',
+        ]
+        ]);
     }
 }
