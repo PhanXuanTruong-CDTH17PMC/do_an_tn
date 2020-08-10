@@ -13,7 +13,7 @@ class CreatePhanAnhsTable extends Migration
      */
     public function up()
     {
-        Schema::create('PhanAnh', function (Blueprint $table) {
+        Schema::create('phananh', function (Blueprint $table) {
             $table->increments('id');
             $table->string('noi_dung_pa');
             $table->Date('ngay_tao');
@@ -32,6 +32,6 @@ class CreatePhanAnhsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phan_anhs');
+        Schema::dropIfExists('phananh');
     }
 }

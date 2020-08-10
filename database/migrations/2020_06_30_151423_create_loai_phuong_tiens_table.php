@@ -13,10 +13,10 @@ class CreateLoaiPhuongTiensTable extends Migration
      */
     public function up()
     {
-        Schema::create('LoaiPhuongTien', function (Blueprint $table) {
+        Schema::create('loaiphuongtien', function (Blueprint $table) {
             $table->increments('id');
             $table->string('ten_loai_phuong_tien');
-            $table->Float('so_tien');
+            $table->Integer('dich_vu_id');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateLoaiPhuongTiensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('loai_phuong_tiens');
+        Schema::dropIfExists('loaiphuongtien');
     }
 }

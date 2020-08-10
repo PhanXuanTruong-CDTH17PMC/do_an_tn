@@ -46,6 +46,26 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'nhanvien' => [
+            'driver' => 'session',
+            'provider' => 'nhanvien',
+        ],
+
+        'nhanvien-api' => [
+            'driver' => 'token',
+            'provider' => 'nhanvien',
+            'hash' => false,
+        ],
+        'canho' => [
+            'driver' => 'session',
+            'provider' => 'canho',
+        ],
+
+        'canho-api' => [
+            'driver' => 'token',
+            'provider' => 'canhos',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -70,6 +90,14 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+        'nhanvien' => [
+            'driver' => 'eloquent',
+            'model' => App\NhanVien::class,
+        ],   
+        'canho' => [
+            'driver' => 'eloquent',
+            'model' => App\CanHo::class,
+        ],   
 
         // 'users' => [
         //     'driver' => 'database',
@@ -95,6 +123,18 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'nhanvien' => [
+            'provider' => 'nhanvien',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'canho' => [
+            'provider' => 'canho',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,

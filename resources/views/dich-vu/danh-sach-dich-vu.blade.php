@@ -44,8 +44,7 @@
     <div class="col-12">
         <div class="page-title-box">
             <h4 class="page-title">Dịch vụ</h4>
-            <a href="/them-moi-dich-vu" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
-            <a href="/loai-dich-vu   " style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Quản lý Loại dịch vụ</a><br>
+            <a href="dich-vu/create" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
             <!-- @if (isset($quanTriViens))
                 <a href="{{ route('quan-tri-vien.thung-rac') }}" style="margin-bottom:10px;" class="btn btn-info waves-effect waves-light">Xem quản trị viên đã xóa</a>
             @endif -->
@@ -59,13 +58,33 @@
             <div class="card-body">
                 <table  class="table dt-responsive nowrap">
                     <thead>
-                        <tr>
+                        <tr style="background-color: #6c757d;; color:white">
                             <th>ID</th>
                             <th>Tên dịch vụ</th>
-                            <th>loại dịch vụ</th>
-                            
-                            
+                            <th>Đơn vị</th>
+                            <th>Chi Phí</th>
+                            <th>     </th>
                         </tr>
+                         @if (count($dichvu )>0)
+                            @foreach ($dichvu as $dich_vu )
+                                    <tr>
+                                        <th>{{$dich_vu-> id}}</th>
+                                        <th>{{$dich_vu-> ten_dich_vu}}</th>
+                                        <th>{{$dich_vu-> don_vi}}</th>
+                                        <th>{{$dich_vu-> phi_dv}}</th>
+                                        <th style="width: 200px">
+                                            <div>
+                                            <a href="/dich-vu/{{$dich_vu-> id}}/edit" class="btn btn-info" >Edit</a>
+                                            {!!Form::open(['action'=> ['DichVuController@destroy',$dich_vu-> id],'method' =>'POST','class'=>'pull-right'])!!}
+                                            {{Form::hidden('_method','DELETE')}}
+                                            {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                                            {!!Form::close()!!}
+                                            </div>
+                                        </th>
+                                    </tr>                              
+                            @endforeach    
+                        @else
+                        @endif
                     </thead>
                     
                 </table>

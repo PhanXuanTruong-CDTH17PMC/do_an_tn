@@ -10,5 +10,5 @@ class PhanAnh extends Model
 {
      Use SoftDeletes;
     protected $dates = ['deleted_at'];
-    protected $table = 'PhanAnh';
+    protected $table = 'phananh';
 }

@@ -13,7 +13,7 @@ class CreateKhuVucsTable extends Migration
      */
     public function up()
     {
-        Schema::create('KhuVuc', function (Blueprint $table) {
+        Schema::create('khuvuc', function (Blueprint $table) {
             $table->increments('id');
             $table->string('ten_khu_vuc');
             $table->softDeletes();
@@ -28,6 +28,6 @@ class CreateKhuVucsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('khu_vucs');
+        Schema::dropIfExists('khuvuc');
     }
 }

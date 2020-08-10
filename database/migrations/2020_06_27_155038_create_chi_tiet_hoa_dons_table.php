@@ -13,15 +13,13 @@ class CreateChiTietHoaDonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ChiTietHoaDon', function (Blueprint $table) {
+        Schema::create('chitiethoadon', function (Blueprint $table) {
             $table->increments('id');
-            $table->Integer('can_ho_id');
             $table->Integer('hoa_don_id');
-            $table->Integer('service_id');
+            $table->Integer('can_ho_id');
+            $table->Integer('dich_vu_id');
             $table->Float('so_luong');
-            $table->Date('ngay_thanh_toan');
-            $table->Float('thanh_tien');
-            $table->Boolean('tinh_trang_tt');
+            $table->double('thanh_tien');
             $table->softDeletes();
             $table->timestamps();    
         });
@@ -34,6 +32,6 @@ class CreateChiTietHoaDonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('chi_tiet_hoa_dons');
+        Schema::dropIfExists('chitiethoadon');
     }
 }

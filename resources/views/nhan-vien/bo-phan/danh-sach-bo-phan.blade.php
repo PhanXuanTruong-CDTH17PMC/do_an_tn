@@ -44,7 +44,7 @@
     <div class="col-12">
         <div class="page-title-box">
             <h4 class="page-title">Nhân viên</h4>
-            <a href="/them-bo-phan" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
+            <a href="/danh-sach-bo-phan/create" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
             
             <!-- @if (isset($quanTriViens))
                 <a href="{{ route('quan-tri-vien.thung-rac') }}" style="margin-bottom:10px;" class="btn btn-info waves-effect waves-light">Xem quản trị viên đã xóa</a>
@@ -57,14 +57,33 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <table class="table dt-responsive nowrap">
+                <table  class="table dt-responsive nowrap">
                     <thead>
-                        <tr>
+                        <tr style="background-color: #6c757d;; color:white">
                             <th>ID</th>
                             <th>Bộ phận</th>
-                            
-
+                            <th></th>
                         </tr>
+
+                        @if (count($bophan )>1)
+                            @foreach ($bophan as $bo_phan )
+                                    <tr>
+                                        <th>{{$bo_phan-> id}}</th>
+                                        <th>{{$bo_phan-> ten_bo_phan}}</th>
+                                        <th style="width: 200px">
+                                            <div>
+                                            <a href="/danh-sach-bo-phan/{{$bo_phan->id}}/edit" class="btn btn-info" >Edit</a>
+                                            {!!Form::open(['action'=> ['BoPhanController@destroy',$bo_phan->id],'method' =>'POST','class'=>'pull-right'])!!}
+                                            {{Form::hidden('_method','DELETE')}}
+                                            {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                                            {!!Form::close()!!}
+                                            </div>
+                                        </th>
+                                    </tr>                              
+                            @endforeach    
+                        @else
+                        @endif
+
                     </thead>
                     <!--  -->
                 </table>

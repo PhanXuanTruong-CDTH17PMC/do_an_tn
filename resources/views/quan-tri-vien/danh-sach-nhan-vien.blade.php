@@ -59,7 +59,7 @@
             <div class="card-body">
                 <table id="datatable" class="table dt-responsive nowrap">
                     <thead>
-                        <tr>
+                        <tr style="background-color: #6c757d;; color:white">
                             <th>ID</th>
                             <th>Họ tên</th>
                             <th>CMND</th>
@@ -69,6 +69,7 @@
                             <th>Địa chỉ</th>
                             <th>Bộ phận</th>
                             <th>Loại tài khoản</th>
+                            <th>     </th>
                         </tr>
                     </thead>
                     <!--  -->

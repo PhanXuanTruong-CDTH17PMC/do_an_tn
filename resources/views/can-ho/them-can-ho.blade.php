@@ -15,30 +15,61 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card-box">
-                <form
+                {!!Form::open(['action' => 'CanHoController@store','method'=> 'POST']) !!}
+                    <div class="form-group">
+                        {{Form::label('title','Tầng')}}<span class="text-danger"> 
+                    *</span>
+                    <div class="form-group">
+                        {{Form::Text('tang','',['class'=> 'form-control','placeholder'=>'Nhập tầng'])}}
+                    </div> 
+                    </div>
+                    <div class="form-group">
+                        {{Form::label('title','Diện tích')}}<span class="text-danger"> 
+                    *</span>
+                    <div class="form-group">
+                        {{Form::Text('dientich','',['class'=> 'form-control','placeholder'=>'Nhập diện tích căn hộ'])}}
+                    </div> 
+                    <div class="form-group">
+                        {{Form::label('title','Tên căn hộ')}}<span class="text-danger"> 
+                    *</span>
+                    <div class="form-group">
+                        {{Form::Text('tencanho','',['class'=> 'form-control','placeholder'=>'Nhập tên căn hộ'])}}
+                    </div> 
+                    </div>
+                    <div class="form-group">
+                        {{Form::label('title','Mật khẩu')}}<span class="text-danger"> 
+                    *</span>
+                    <div class="form-group">
+                        {{Form::Text('matkhau','',['class'=> 'form-control','placeholder'=>'Nhập mật khẩu căn hộ'])}}
+                    </div> 
+                    </div>
+                    <div class="form-group">
+                        {{Form::label('title','Loại căn hộ')}}<span class="text-danger"> 
+                    *</span>
                     
                     <div class="form-group">
-                        
-                        <label>Tầng<span class="text-danger">*</span></label>
-                        <input type="text"  placeholder="Nhập số tầng" class="form-control">
-                        <label>Diện tích<span class="text-danger">*</span></label>
-                        <input type="text"  placeholder="Nhập diện tích" class="form-control">
-                        <label>Name<span class="text-danger">*</span></label>
-                        <input type="text"  placeholder="Nhập tên tài khoản" class="form-control">
-                        <label>Password<span class="text-danger">*</span></label>
-                        <input type="text"  placeholder="Nhập mật khẩu cho tài khoản căn hộ" class="form-control">
-                        <label>Loại căn hộ<span class="text-danger">*</span></label>
-                        <input type="text"  placeholder="Nhập loại căn hộ" class="form-control">
-                        <label>Chủ hộ<span class="text-danger">*</span></label>
-                        <input type="text"  placeholder="Nhập tên chủ hộ" class="form-control">
-                        
+                        <select class="form-control" id="loaicanho" name="loaicanho" required focus>
+                        <option value="" disabled selected>Chọn loại căn hộ </option>        
+                        @foreach($loaicanho as $loai_can_ho)
+                        <option name="ten_loaicanho" value="{{$loai_can_ho->id}}">{{ $loai_can_ho->ten_loai_can_ho }}</option>
+                        @endforeach
+                        </select>
+                    </div> 
                     </div>
+                    <div class="form-group">
+                        {{Form::label('title','Chủ hộ')}}<span class="text-danger"> *</span>
+                    <div class="form-group">
+                        <select class="form-control" id="chuho" name="chuho" required focus>
+                        <option value="" disabled selected>Chọn chủ hộ </option>        
+                        @foreach($cudan as $chu_ho)
+                        <option name="tenchuho" value="{{$chu_ho->id}}">{{ $chu_ho->ho_ten_cd }}</option>
+                        @endforeach
+                        </select>
+                    </div> 
                     
-                    <div class="form-group text-left mb-0">
-                        <button type="submit" class="btn btn-success waves-effect waves-light">Lưu</button>
-                        <a href="#" class="btn btn-purple waves-effect waves-light">Hủy</a>
-                    </div>
-                </form>
+                    {{Form::submit('Lưu',['class'=>'btn btn-success waves-effect waves-light'])}}
+                    {{Form::button('Hủy',['class'=>'btn btn-purple waves-effect waves-light'])}}
+                    {!!Form::close() !!}
             </div>
         </div>
     </div>

@@ -13,7 +13,7 @@ class CreateLoaiCanHosTable extends Migration
      */
     public function up()
     {
-        Schema::create('LoaiCanHo', function (Blueprint $table) {
+        Schema::create('loaicanho', function (Blueprint $table) {
             $table->increments('id');
             $table->string('ten_loai_can_ho');
             $table->softDeletes();
@@ -28,6 +28,6 @@ class CreateLoaiCanHosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('loai_can_hos');
+        Schema::dropIfExists('loaicanho');
     }
 }

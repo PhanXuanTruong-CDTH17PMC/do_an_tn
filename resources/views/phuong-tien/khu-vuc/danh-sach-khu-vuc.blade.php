@@ -1,6 +1,6 @@
 @extends('layout')
 @section('title')
-    Danh sách khu vực
+    Danh sách khu vực 
 @endsection
 @section('css')
 
@@ -43,12 +43,10 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box">
-            <h4 class="page-title">Khu vực</h4>
-            <a href="/them-moi-khu-vuc" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
+            <h4 class="page-title">Khu vực để xe</h4>
+            <a href="/khu-vuc/create" style="margin-bottom:10px;" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
             
-            <!-- @if (isset($quanTriViens))
-                <a href="{{ route('quan-tri-vien.thung-rac') }}" style="margin-bottom:10px;" class="btn btn-info waves-effect waves-light">Xem quản trị viên đã xóa</a>
-            @endif -->
+            
         </div>
     </div>
 </div>
@@ -57,14 +55,33 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <table class="table dt-responsive nowrap">
+                <table  class="table dt-responsive nowrap">
                     <thead>
-                        <tr>
+                        <tr style="background-color: #6c757d;; color:white">
                             <th>ID</th>
                             <th>Khu vực</th>
-                            
-
+                            <th></th>
                         </tr>
+
+                        @if (count($khuvuc )>0)
+                            @foreach ($khuvuc as $khu_vuc )
+                                    <tr>
+                                        <th>{{$khu_vuc-> id}}</th>
+                                        <th>{{$khu_vuc-> ten_khu_vuc}}</th>
+                                        <th style="width: 200px">
+                                            <div>
+                                            <a href="/khu-vuc/{{$khu_vuc->id}}/edit" class="btn btn-info" >Edit</a>
+                                            {!!Form::open(['action'=> ['KhuVucController@destroy',$khu_vuc-> id],'method' =>'POST','class'=>'pull-right'])!!}
+                                            {{Form::hidden('_method','DELETE')}}
+                                            {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                                            {!!Form::close()!!}
+                                            </div>
+                                        </th>
+                                    </tr>                              
+                            @endforeach    
+                        @else
+                        @endif
+
                     </thead>
                     <!--  -->
                 </table>

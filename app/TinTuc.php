@@ -9,5 +9,5 @@ class TinTuc extends Model
 {
     Use SoftDeletes;
     protected $dates = ['deleted_at'];
-    protected $table = 'TinTuc';
+    protected $table = 'tintuc';
 }

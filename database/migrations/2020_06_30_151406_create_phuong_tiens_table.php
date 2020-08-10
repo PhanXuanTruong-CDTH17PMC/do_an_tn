@@ -13,7 +13,7 @@ class CreatePhuongTiensTable extends Migration
      */
     public function up()
     {
-        Schema::create('PhuongTien', function (Blueprint $table) {
+        Schema::create('phuongtien', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nhan_hieu');
             $table->Text('mau_sac');
@@ -33,6 +33,6 @@ class CreatePhuongTiensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phuong_tiens');
+        Schema::dropIfExists('phuongtien');
     }
 }

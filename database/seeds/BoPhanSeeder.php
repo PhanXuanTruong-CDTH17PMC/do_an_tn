@@ -11,7 +11,7 @@ class BoPhanSeeder extends Seeder
      */
     public function run()
     {
-         DB::table('BoPhan')->insert([
+         DB::table('bophan')->insert([
             [	
                 'ten_bo_phan' => 'Ban quản lý'	
             ],

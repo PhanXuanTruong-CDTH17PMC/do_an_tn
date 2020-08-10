@@ -13,12 +13,12 @@ class CreateHoaDonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('HoaDon', function (Blueprint $table) {
+        Schema::create('hoadon', function (Blueprint $table) {
             $table->increments('id');  
-            $table->Date('ngay_thu');
-            $table->Float('tong_tien');
             $table->Integer('can_ho_id');
+            $table->double('tong_tien');
             $table->Integer('nhan_vien_id');
+            $table->Boolean('tinh_trang_tt');
             $table->softDeletes();
             $table->timestamps();    
         });
@@ -31,6 +31,6 @@ class CreateHoaDonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hoa_dons');
+        Schema::dropIfExists('hoadon');
     }
 }

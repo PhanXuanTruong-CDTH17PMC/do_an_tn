@@ -13,10 +13,10 @@ class CreateTinTucsTable extends Migration
      */
     public function up()
     {
-        Schema::create('TinTuc', function (Blueprint $table) {
+        Schema::create('tintuc', function (Blueprint $table) {
             $table->increments('id');
-            $table->String('noi_dung_tt');
-            $table->Date('ngay_dang');
+            $table->Text('tieu_de');
+            $table->Text('noi_dung_tt');
             $table->String('anh_dai_dien');
             $table->Integer('nhan_vien_id');
             $table->softDeletes();
@@ -31,6 +31,6 @@ class CreateTinTucsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tin_tucs');
+        Schema::dropIfExists('tintuc');
     }
 }

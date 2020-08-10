@@ -13,7 +13,7 @@ class CreateBoPhansTable extends Migration
      */
     public function up()
     {
-        Schema::create('BoPhan', function (Blueprint $table) {
+        Schema::create('bophan', function (Blueprint $table) {
             $table->increments('id');
             $table->string('ten_bo_phan');
             $table->softDeletes();
@@ -28,6 +28,6 @@ class CreateBoPhansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bo_phans');
+        Schema::dropIfExists('bophan');
     }
 }

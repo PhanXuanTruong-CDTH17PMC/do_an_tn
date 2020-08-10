@@ -13,7 +13,7 @@ class CreateQuanHesTable extends Migration
      */
     public function up()
     {
-        Schema::create('QuanHe', function (Blueprint $table) {
+        Schema::create('quanhe', function (Blueprint $table) {
             $table->increments('id');
             $table->string('ten_quan_he');
             $table->softDeletes();
@@ -28,6 +28,6 @@ class CreateQuanHesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quan_hes');
+        Schema::dropIfExists('quanhe');
     }
 }

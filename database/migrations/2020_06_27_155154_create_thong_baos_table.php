@@ -13,10 +13,10 @@ class CreateThongBaosTable extends Migration
      */
     public function up()
     {
-        Schema::create('ThongBao', function (Blueprint $table) {
+        Schema::create('thongbao', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('noi_dung_tb');
-            $table->Date('ngay_tb');
+            $table->Text('tieu_de_tb');
+            $table->Text('noi_dung_tb');
             $table->Boolean('tinh_trang');
             $table->Integer('nhan_vien_id');
             $table->Integer('can_ho_id');
@@ -32,6 +32,6 @@ class CreateThongBaosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('thong_baos');
+        Schema::dropIfExists('thongbao');
     }
 }

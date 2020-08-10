@@ -11,6 +11,25 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
-    }
+         $this-> call([
+             BoPhanSeeder::class,
+             LoaiCanHoSeeder::class,
+             CanHoSeeder::class,
+             ChiTietHoaDonSeeder::class,
+             CuDanSeeder::class,
+             HoaDonSeeder::class,
+             KhuVucSeeder::class,
+             LoaiAccountSeeder::class,
+             LoaiPhuongTienSeeder::class,
+             LoaiCanHoSeeder::class,
+             NhanVienSeeder::class,
+             PhanAnhSeeder::class,
+             PhuongTienSeeder::class,
+             QuanHeSeeder::class,
+             DichVuSeeder::class,
+             ThongBaoSeeder::class,
+             TinTucSeeder::class,
+        ]);
+
+  	}
 }

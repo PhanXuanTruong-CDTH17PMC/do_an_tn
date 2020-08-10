@@ -13,9 +13,9 @@
     <div class="row">
         <div class="col-lg-4 col-xl-12">
             <div class="card-box text-center">
-                <img src="{{ asset('assets/images/users/user-1.jpg') }}" class="rounded-circle avatar-lg img-thumbnail" alt="profile-image">
+                <img src="{{ asset('assets/images/logo.png') }}" class="rounded-circle avatar-lg img-thumbnail" alt="profile-image">
 
-                <h4 class="mb-0">Name</h4>
+                <h4 class="mb-0">Phan Trường</h4>
                 <p class="text-muted"></p>
                 <a  class="btn btn-success btn-xs waves-effect mb-2 waves-light">Đổi tên</a>
                 <a  class="btn btn-danger btn-xs waves-effect mb-2 waves-light">Đổi mật khẩu</a>
@@ -23,19 +23,19 @@
                 <div class="text-left mt-3">
                     <h4 class="font-13 text-uppercase">Thông tin</h4>
                     <p class="text-muted font-13 mb-3">
-                        Chào, tôi là Admin.<br>
-                        Ngày 29/02/1997 là sinh nhật tôi.<br>
-                        Dự là vào những năm 2025 tôi sẽ là 1 trong những lập trình viên sáng giá nhất thế giới, còn hiện tại tôi chỉ mới bắt đầu với Framework Laravel!<br>
+                        Chào, tôi là <b> Admin</b>.<br>
+                        Ngày 23/22/1999 là sinh nhật tôi.<br>
+                        Dự là vào những năm 2020 tôi sẽ là 1 trong những lập trình viên sáng giá nhất thế giới, còn hiện tại tôi ddang bắt đầu với Framework Laravel!<br>
                         Châm ngôn học Laravel của tôi là <i><b>"<a href="https://laravel.com/">Laravel</a> is easy!"</b></i>
                     </p>
-                    <p class="text-muted mb-2 font-13"><strong>Họ tên:</strong> <span class="ml-2">Admin</span></p>
-                    <p class="text-muted mb-2 font-13"><strong>Điện thoại :</strong><span class="ml-2">0868.3838.97</span></p>
-                    <p class="text-muted mb-2 font-13"><strong>Email :</strong> <span class="ml-2 ">MinhTan97.Hardworking@gmail.com</span></p>
+                    <p class="text-muted mb-2 font-13"><strong>Họ tên:</strong> <span class="ml-2">Phan Xuân Trường</span></p>
+                    <p class="text-muted mb-2 font-13"><strong>Điện thoại :</strong><span class="ml-2">0333.498.321</span></p>
+                    <p class="text-muted mb-2 font-13"><strong>Email :</strong> <span class="ml-2 ">truongphan@vn.isb.jp</span></p>
                 </div>
 
                 <ul class="social-list list-inline mt-3 mb-0">
                     <li class="list-inline-item">
-                        <a href="https://www.facebook.com/          " class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
+                        <a href="https://www.facebook.com" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
                     </li>
                     <li class="list-inline-item">
                         <a href="#" class="social-list-item border-danger text-danger"><i class="mdi mdi-google"></i></a>

@@ -13,9 +13,9 @@ class CreateCuDansTable extends Migration
      */
     public function up()
     {
-        Schema::create('CuDan', function (Blueprint $table) {
+        Schema::create('cudan', function (Blueprint $table) {
             $table->increments('id');
-            $table->Text('ho_ten_cd');
+            $table->string('ho_ten_cd');
             $table->Text('CMND');
             $table->Text('email');
             $table->Text('SDT');
@@ -34,6 +34,6 @@ class CreateCuDansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cu_dans');
+        Schema::dropIfExists('cudan');
     }
 }

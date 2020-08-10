@@ -13,12 +13,12 @@ class CreateCanHosTable extends Migration
      */
     public function up()
     {
-        Schema::create('CanHo', function (Blueprint $table) {
+        Schema::create('canho', function (Blueprint $table) {
             $table->increments('id');
             $table->Integer('Tang');
             $table->Integer('dien_tich');   
             $table->Text('name');
-            $table->Text('mat_khau');
+            $table->Text('password');
             $table->Integer('loai_can_ho_id');
             $table->Integer('chu_ho_id');
             $table->softDeletes();
@@ -33,6 +33,6 @@ class CreateCanHosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('can_hos');
+        Schema::dropIfExists('canho');
     }
 }

@@ -13,14 +13,14 @@ class CreateNhanViensTable extends Migration
      */
     public function up()
     {
-        Schema::create('NhanVien', function (Blueprint $table) {
-            $table->increments('id'); 
-            $table->Text('ho_ten_nv');
+        Schema::create('nhanvien', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('ho_ten_nv');
             $table->Text('CMND');
             $table->Text('email');
             $table->Text('SDT');
             $table->Date('ngay_sinh');
-            $table->Text('uername');
+            $table->Text('username');
             $table->Text('password');
             $table->Integer('loai_account_id');
             $table->Integer('bo_phan_id');
@@ -36,6 +36,6 @@ class CreateNhanViensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nhan_viens');
+        Schema::dropIfExists('nhanvien');
     }
 }

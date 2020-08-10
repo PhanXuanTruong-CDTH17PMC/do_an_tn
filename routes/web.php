@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use Illuminate\Support\Facades\Route;
 
@@ -13,76 +13,83 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('quan-tri-vien.dang-nhap');
+Route::resource('/', 'HomePageController' );
+// Route::get('/home-page',function(){
+//     return view('layout');
+// });
+Route::resource('/log-in','LoginController');
+Route::post('getLogin','LoginController@getLogin');
+Route::get('logout','LoginController@logout')->name('logout');
+
+
+Route::get('/admin-info',function(){
+    return view('quan-tri-vien.trang-ca-nhan');
 });
+/*Route::get('/danh-sach-nhan-vien',function(){
+    return view('nhan-vien.danh-sach-nhan-vien');
+});*/
 
-Route::get('/log-in','QuanTriVienController@login');
-Route::get('/admin-info','QuanTriVienController@trangcanhan');
-Route::get('/danh-sach-nhan-vien','QuanTriVienController@index');
-Route::get('/them-moi-nhan-vien','NhanVienController@create');
+//Quản lý thông tin nhân viên
+Route::resource('danh-sach-nhan-vien','NhanVienController');
+Route::resource('danh-sach-bo-phan','BoPhanController');
 
-Route::get('/bo-phan', function () {
-    return view('nhan-vien.bo-phan.danh-sach-bo-phan');
-});
-
-Route::get('/them-bo-phan', function () {
-    return view('nhan-vien.bo-phan.them-bo-phan');
-});
-
-Route::get('/can-ho', function () {
+// Route::resource('danh-sach-tin-tuc','TinTucController');
+// Route::resource('danh-sach-thong-bao','ThongBaoController');
+//Quản lý thông tin căn hộ
+/*Route::get('/can-ho', function () {
     return view('can-ho.danh-sach-can-ho');
-});
-
-Route::get('/them-can-ho', function () {
-    return view('can-ho.them-can-ho');
-});
+});*/
+Route::resource('can-ho','CanHoController');
 
 
-Route::get('/cu-dan', function () {
-    return view('cu-dan.danh-sach-cu-dan');
-});
-Route::get('/them-moi-cu-dan', function () {
-    return view('cu-dan.them-moi-cu-dan');
-});
-Route::get('/moi-quan-he', function () {
-    return view('cu-dan.quan-he.danh-sach-moi-quan-he');
-});
-Route::get('/them-moi-quan-he', function () {
-    return view('cu-dan.quan-he.them-moi-quan-he');
+
+
+
+Route::resource('loai-account', 'LoaiAccountController');
+/*Route::get('/bo-phan', function () {
+    return view('nhan-vien.bo-phan.danh-sach-bo-phan');
+});*/
+
+Route::resource('loai-can-ho', 'LoaiCanHoController');
+
+/*Route::get('/loai-account', function () {
+    return view('nhan-vien.loai-account.danh-sach-loai-account');
+});*/
+
+Route::resource('quan-he', 'MoiQuanHeController');
+
+Route::resource('cu-dan', 'CuDanController');
+
+Route::resource('khu-vuc', 'KhuVucController');
+
+Route::resource('loai-phuong-tien', 'LoaiPhuongTienController');
+
+Route::resource('phuong-tien', 'PhuongTienController');
+
+Route::resource('danh-sach-thong-bao','ThongBaoController');
+
+Route::resource('danh-sach-tin-tuc','TinTucController');
+
+
+
+
+Route::resource('dich-vu', 'DichVuController');
+Route::prefix('tin-tuc')->group(function(){
+    Route::get('/','TinTucController@index')->name('danh-sach-tin-tuc');
+    Route::get('them','TinTucController@create')->name('them-tin-tuc');
+    Route::post('them','TinTucController@store')->name('xu-ly-them-tin-tuc');
 });
 
 
-Route::get('/phuong-tien', function () {
-    return view('phuong-tien.danh-sach-phuong-tien');
-});
-Route::get('/them-moi-phuong-tien', function () {
-    return view('phuong-tien.them-moi-phuong-tien');
-});
-Route::get('/khu-vuc', function () {
-    return view('phuong-tien.khu-vuc.danh-sach-khu-vuc');
-});
-Route::get('/them-moi-khu-vuc', function () {
-    return view('phuong-tien.khu-vuc.them-moi-khu-vuc');
-});
+Route::resource('hoa-don','HoaDonController' );
 
-
-Route::get('/dich-vu', function () {
-    return view('dich-vu.danh-sach-dich-vu');
-});
-Route::get('/them-moi-dich-vu', function () {
-    return view('dich-vu.them-moi-dich-vu');
-});
-Route::get('/loai-dich-vu', function () {
-    return view('dich-vu.loai-dich-vu.danh-sach-loai-dich-vu');
-});
-Route::get('/them-moi-loai-dich-vu', function () {
-    return view('dich-vu.loai-dich-vu.them-moi-loai-dich-vu');
-});
-
-Route::get('/hoa-don', function () {
-    return view('hoa-don.danh-sach-hoa-don');
-});
-Route::get('/them-moi-hoa-don', function () {
-    return view('hoa-don.them-moi-hoa-don');
-});
+ Route::get('/user', function () {
+     return view('user.layout.user-layout');
+ });
+// Route::get('/home-page', function () {
+//     return view('user.home-page');
+// 
+ Route::resource('/thong-bao', 'UserThongBaoController');
+ Route::resource('/phan-anh', 'UserPhanAnhController');
+ Route::resource('/thong-bao', 'UserThongBaoController');
+ Route::resource('/phan-anh', 'UserPhanAnhController');

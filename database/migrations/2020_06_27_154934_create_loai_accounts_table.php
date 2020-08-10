@@ -13,7 +13,7 @@ class CreateLoaiAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('LoaiAccount', function (Blueprint $table) {
+        Schema::create('loaiaccount', function (Blueprint $table) {
             $table->increments('id');
             $table->string('ten_loai_account');
             $table->softDeletes();
@@ -28,6 +28,6 @@ class CreateLoaiAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('loai_accounts');
+        Schema::dropIfExists('loaiaccount');
     }
 }
